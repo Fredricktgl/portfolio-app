@@ -1,0 +1,89 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ .banner-container {
+  display: grid;
+  height: 400px;
+  background-image: url("ai-brain.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  grid-template-columns: 1fr;
+  grid-template-areas: "banner"
+ }
+
+.banner-text {
+  grid-area: banner;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  font-size: 1.6em;
+}
+
+.banner-picture{
+  background-color: black;
+}
+
+.content-bg-color{
+  background-color: #F8F8FF;
+  padding: 22px 0 0 0;
+}
+
+.contact-bar {
+  padding: 15px 5px 15px 5px;
+}
+
+.contacts-td{
+  padding: 12px 5px 13px 5px;
+}
+
+.contacts-td a{
+  color: black;
+  text-decoration:none;
+}
+
+.contacts-td a:hover{
+	background-color: #98FB98;
+	padding: 13px 5px 14px 5px;
+  text-decoration: none;
+	color: black;
+	border-radius: 10px;
+}
+
+.card-display{
+  height: 180px;
+}
+
+.footer{
+  background-image: url("matrix.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.footer-text {
+  color: white;
+  font-size: 1em;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 20px 0;
+}
+
+.edit-td{
+  padding: 15px 0 15px 0;
+}

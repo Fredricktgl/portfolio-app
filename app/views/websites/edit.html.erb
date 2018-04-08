@@ -1,0 +1,23 @@
+<div class="row content-bg-color">
+  <div class="col-md-12 text-center">
+    <h2><strong>Edit webpage link</strong></h2>
+  </div>
+</div>
+
+<div class="row content-bg-color">
+  <div class="col-md-12">
+    <table width="100%">
+      <%= form_for @website, url: website_path, method: :put do |f| %>
+        <tr><td class="edit-td" width="250px"><strong>Project Name: </strong></td><td><%= f.text_field :name, class: "form-control" %></td></tr>
+        <tr><td class="edit-td"><strong>Description: </strong></td><td><%= f.text_area :description, class: "form-control", rows: "3" %></td></tr>
+        <tr><td class="edit-td"><strong>Tools: </strong></td><td><%= f.text_area :tools, class: "form-control" %></td></tr>
+        <tr><td class="edit-td"><strong>Web URL: </strong></td><td><%= f.text_field :web_url, class: "form-control" %></td></tr>
+        <tr><td class="edit-td"><strong>Git URL; </strong></td><td><%= f.text_field :git_url, class: "form-control" %></td></tr>
+        <tr><td class="edit-td" colspan="2"><%= f.filestack_field :filepicker_url, "update website picture", class: "btn btn-success btn-sm" %>
+        &nbsp<%= submit_tag 'submit', class: "btn btn-sm btn-primary" %>
+        &nbsp<%= link_to "Back", :back, class: "btn btn-sm btn-secondary" %></td></tr>
+      <% end %>
+    </table>
+    </br>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="row content-bg-color">
+  <div class="col-md-12 text-center">
+    <h2><strong>Create a new web link</strong></h2>
+  </div>
+</div>
+
+<div class="row content-bg-color">
+  <div class="col-md-12">
+  <%= form_for @website, url: websites_path do |f| %>
+    <p><%= f.text_field :name, placeholder: "Name of website", class: "form-control" %></p>
+    <p><%= f.text_area :description, placeholder: "website description", class: "form-control", rows: "3" %></p>
+    <p><%= f.text_area :tools, placeholder: "tools", class: "form-control"  %></p>
+    <p><%= f.text_field :web_url, placeholder: "web URL", class: "form-control"  %></p>
+    <p><%= f.text_field :git_url, placeholder: "github URL", class: "form-control"  %></p>
+    <p><%= f.filestack_field :filepicker_url, "Upload website picture", class: "btn btn-primary btn-sm" %></p>
+    <p><%= submit_tag 'Create web link', class: "btn btn-primary btn-sm" %></p>
+  <% end %>
+    <p><%= link_to "Back", :back, class: "btn btn-sm btn-secondary" %></p>
+  </div>
+</div>

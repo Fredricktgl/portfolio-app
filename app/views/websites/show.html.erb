@@ -1,0 +1,23 @@
+<div class="row content-bg-color">
+  <div class="col-md-12 text-center">
+    <h2><strong><%= @website.name %></strong></h2>
+  </div>
+</div>
+
+<div class="row content-bg-color">
+  <div class="col-md-8 offset-md-2 d-flex justify-content-center">
+    <%= filestack_image @website.filepicker_url, transform: filestack_transform.resize(height: 380), class: "border border-dark" %>
+  </div>
+</div>
+
+<div class="row content-bg-color">
+  <div class="col-md-8 offset-md-2">
+    <p><strong>Project Description: </strong><%= @website.description %></p>
+    <p><strong>Tools used: </strong> <%= @website.tools %></p>
+    <p><%= link_to 'Open', @website.web_url, class: "btn btn-outline-success btn-sm ", target: :_blank %>
+    <%= link_to image_tag("github.png", size: "30x30"), @website.git_url, target: :_blank %></p>
+    <p><%= link_to "Back", :back, class: "btn btn-sm btn-secondary" %></p>
+  </div>
+  </br>
+</div>
+
